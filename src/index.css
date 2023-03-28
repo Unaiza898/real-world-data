@@ -8,12 +8,16 @@
   background-color: #242424;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  /* text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; */
 }
 
+
+.feature{
+  width: 1000px;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -26,7 +30,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
 
 }
 
@@ -35,6 +39,11 @@ h1 {
   line-height: 1.1;
 }
 
+
+.wholepage{
+ width: 70%;
+
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -76,7 +85,7 @@ button:focus-visible {
 
   .column {
     float: left;
-    width: 33.33%;
+    width: 25%;
   }
   
   /* Clear floats after the columns */
@@ -87,6 +96,7 @@ button:focus-visible {
   }
 
   .box{
+    margin-left: 110px;
     width: 120px;
     height: 120px;
     padding: 20px;

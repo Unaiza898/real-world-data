@@ -20,6 +20,8 @@ const Feature = ({ event1, event2, event3 }) => {
 
     
      </div>
+     
+     
         </div>
         </div>
           

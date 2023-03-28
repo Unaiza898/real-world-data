@@ -12,6 +12,7 @@ function App() {
   const [list, setList] = useState(null);
   const [filteredResults, setFilteredResults] = useState([]);
 const [searchInput, setSearchInput] = useState("");
+const [dropdown, setDropdown] = useState("");
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
@@ -45,34 +46,80 @@ const [searchInput, setSearchInput] = useState("");
   //     setFilteredResults(Object.keys(list.events));
   //   }
   // };
-  const searchItems = (inputString) => {
-
+  const searchItems = (inputString, columns) => {
+   console.log()
     setSearchInput(inputString)
-    // this is the conditional that will be used to filter the list of characters
-    setFilteredResults(list.events.filter((item) => {
-          return item.short_title.toLowerCase().includes(inputString.toLowerCase())
-    }))}
+    if(columns == "short_title"){
+   // this is the conditional that will be used to filter the list of characters
+   setFilteredResults(list.events.filter((item) => {
+    return item.short_title.toLowerCase().includes(inputString.toLowerCase())
+}))
 
 
+} 
+else if(columns == "type"){
+  setFilteredResults(list.events.filter((item) => {
+    return item.type.toLowerCase().includes(inputString.toLowerCase())
+}))
+
+
+}
+else if(columns == "city"){
+  setFilteredResults(list.events.filter((item) => {
+    return item.venue.city
+    .toLowerCase().includes(inputString.toLowerCase())
+}))
+
+
+}
+    }
+
+ 
+
+    const options = ['Family', 'Sports', 'Theatre', 'Concert', 'nhl', 'Classical_opera', 'Comedy'];
 
 
   return (
   
-    <div className="whole-page">
+    <div className="app">
+
+      <div className='feature'>
+
+      
         <SideNav/>
       <Feature  event1 = {list.events[0].short_title }
       event2 = {list.events[1].short_title }
-        event3 = {list.events[2].short_title }    />
+        event3 = {list.events[2].short_title }
+         />
     <h1> Event List</h1>
     <input
     type="text"
     placeholder="Search..."
-    onChange={(inputString) => searchItems(inputString.target.value)}
+    onChange={(inputString) => searchItems(inputString.target.value,"short_title" )}
   />
+
+ <select className='dropdown' onChange={(inputString) => searchItems(inputString.target.value,"type")}>
+  
+  <option>Please choose one option</option>
+  {options.map((option, index) => {
+      return <option key={index} >
+          {option}
+      </option>
+  })}
+</select>
+<input
+    type="text"
+    placeholder="Enter a city:"
+    onChange={(inputString) => searchItems(inputString.target.value,"city" )}
+  />
+
+
+  
 <div className="row">
 
 <div  className="column">type</div>
 <div  className="column">name</div>
+<div  className="column">date</div>
 <div  className="column">date</div>
 </div>
   
@@ -83,7 +130,8 @@ const [searchInput, setSearchInput] = useState("");
  {/* <li key={coin.short_title}>{coin.short_title}</li>  */}
  <Info name ={data.short_title}
   type ={data.type}
-  date ={data.short_title}
+  date ={data.datetime_local}
+  city = {data.venue.city}
   />
         {console.log(filteredResults)}
     
@@ -99,13 +147,15 @@ const [searchInput, setSearchInput] = useState("");
 
 <Info name ={list.events[data].short_title}
       type = {list.events[data].type}
-      date = {list.events[data].type} />
+      date = {list.events[data].datetime_local}
+      city = {list.events[data].venue.city} />
 
 )} 
 
 
       </ul>
         }
+  </div>
   </div>
   )
 }

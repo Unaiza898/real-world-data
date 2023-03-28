@@ -1,4 +1,4 @@
-const Info = ({ name, type, date }) => {
+const Info = ({ name, type, date,city }) => {
 
     return(
 
@@ -8,6 +8,7 @@ const Info = ({ name, type, date }) => {
        <div  className="column">  {type} </div>
        <div  className="column">{name}</div>
        <div  className="column"> {date}</div>
+       <div  className="column"> {city}</div>
      </div>
     )
 

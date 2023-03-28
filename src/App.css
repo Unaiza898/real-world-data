@@ -1,21 +1,44 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+ 
   text-align: center;
 }
 
 
 .sidenav{
   height: 100%;
-  width: 25%;
+  width: 15%;
   position: fixed;
   top:0;
   left:0;
   bottom: 0;
-  background-color: #232323;
+  background-color: #060681;
+  opacity: 80%;
 }
 
+
+.sidenav a{
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.nav{
+  padding: 15px;
+  font-weight: 40px;
+}
+.a :hover{
+  box-shadow: inset 100px 0 0 0 #f1f1f1;
+  color: white;
+ 
+}
+
+.dropdown{
+  margin: 15px;
+  height: 25px;
+  text-align: center;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
