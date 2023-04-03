@@ -139,7 +139,7 @@ function App() {
                 name={data.short_title}
                 type={data.type}
                 date={data.datetime_local}
-                id = {list.events[data].id}
+                id = {data.id}
                 city={data.venue.city}
               />
               {console.log(filteredResults)}
