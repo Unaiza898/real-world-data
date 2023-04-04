@@ -5,7 +5,7 @@ const Info = ({ id,name, type, date,city }) => {
 
   
        
-       <div  className="row"> 
+       <div  className="row table"> 
        <Link   to={`/coinDetails/${id}`}>
        <div  className="column">{name}</div>
        </Link>
