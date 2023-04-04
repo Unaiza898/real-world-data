@@ -127,11 +127,19 @@ function App() {
     <div className="app">
       <div className="feature">
         <SideNav />
+
+        
+        
+      
         <Feature
-          event1={list.events[0].short_title}
-          event2={list.events[1].short_title}
-          event3={list.events[2].short_title}
+         event1= "Jaguars 1-B"
+         event2="Buckcherry"
+         event3="Eiffel Tower Experience"
+          // event1={list.events[0].short_title}
+          // event2={list.events[1].short_title}
+          // event3={list.events[2].short_title}
         />
+      
         <h1> Event List</h1>
         <input
           type="text"
