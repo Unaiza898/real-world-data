@@ -1,5 +1,5 @@
 # Web Development Project 5 - *Real World Data*
-
+## Part 1 
 Submitted by: **Unaiza Nizami**
 
 This web app: **you will create a data dashboard that provides an at-a-glance summary of information gathered from a public API.**
@@ -38,6 +38,41 @@ Here's a walkthrough of implemented user stories:
 Describe any challenges encountered while building the app.
 
 I did had some trouble filtering the api when building the app
+
+## Part 2
+
+This web app: **Implemented dynamic links using React Router, giving each data point listed on your dashboard a unique link to a corresponding detail view.**
+
+Time spent: **5** hours spent in total
+
+## Required Features
+
+The following **required** functionality is completed:
+
+- [X] **The app includes at least two unique chart developed using the fetched data that tell an interesting story**
+- [X] **Clicking on an item in the list view displays more details about it**
+- [X] **Clicking on an item has a direct, unique link to that item's detail view page**
+
+
+The following **optional** features are implemented:
+
+- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [ ] The site allows users to toggle between different data visualizations
+
+The following **additional** features are implemented:
+
+* [ ] List anything else that you added to improve the site's functionality!
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+
+![codepathproject6](https://user-images.githubusercontent.com/65740643/229678523-3bf5aa6a-097e-448a-a15e-e460667c12f4.gif)
+
+
+
+
 
 ## License
 
